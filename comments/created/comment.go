@@ -174,7 +174,11 @@ func SendZohoMessge(issueKey string, issueSummary string, projectName string) {
 	if apiToken == "" {
 		panic("jira_URL environment variable is not set")
 	}
-	url := "https://cliq.zoho.in/company/60023389010/api/v2/channelsbyname/testalerts/message?zapikey=" + apiToken
+	channelId := os.Getenv("CHANNEL_ENDPOINT")
+	if apiToken == "" {
+		panic("jira_URL environment variable is not set")
+	}
+	url := channelId + "zapikey=" + apiToken
 	issueLink := jiraUrl + "/browse/" + issueKey
 	message := map[string]interface{}{
 		"text": "Jira Updates \n" + "A new comment added in the Issue " + issueKey + "\n Project Name:   " + projectName + "\n Issue ID:   " + issueKey + "\n Issue Summary:   " + issueSummary,

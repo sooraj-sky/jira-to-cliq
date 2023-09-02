@@ -11,9 +11,6 @@ This application is designed to process Jira webhook events and send messages to
 ![Images](./images/issue-deleted.png)
 
 
-
-
-
 ## Prerequisites
 
 Before deploying and using this application, you need to have the following:
