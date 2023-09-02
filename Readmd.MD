@@ -1,6 +1,18 @@
 # Jira Webhook Event Processor with Zoho Cliq Integration
 
-This application is designed to process Jira webhook events and send messages to Zoho Cliq channels. It is implemented as an AWS Lambda function. The Lambda function validates the incoming webhook event and sends a formatted message to a Zoho Cliq channel.
+This application is designed to process Jira webhook events and send messages to Zoho Cliq channels. It is implemented as an AWS Lambda function. The Lambda function validates the incoming webhook event and sends a formatted message to a Zoho Cliq channel. We can send the following updated to the channel.
+1. Issue created
+![Images](./images/issue-created.png)
+2. Issue Updated
+![Images](./images/issue-updated.png)\
+3. Comment added
+![Images](./images/comment-added.png)
+4. Issue Deleted
+![Images](./images/issue-deleted.png)
+
+
+
+
 
 ## Prerequisites
 
@@ -44,8 +56,10 @@ Eg :
 ``$ GOOS=linux GOARCH=amd64 go build -o commented comment.go``
 
 1. **Deploy Lambda Function**: Deploy the Lambda function with the necessary environment variables (ZOHO_CLIQ_API_TOKEN, JIRA_URL, LAMBDA_CRED) and enable the Function URL. See the screenshot below. 
+![Images](./images/lambda-cred.png)
 
 2. **Configure Jira Webhook**: In your Jira instance, configure a webhook that sends events directly to the Lambda function URL. Set the authentication parameter (`lamda-auth`) in the webhook URL.
+![Images](./images/jira-webhook.png)
 
 3. **Testing**: Test the setup by triggering Jira events and verifying the Zoho Cliq messages.
 
