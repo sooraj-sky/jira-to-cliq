@@ -1,0 +1,4 @@
+github.com/aws/aws-lambda-go v1.41.0 h1:l/5fyVb6Ud9uYd411xdHZzSf2n86TakxzpvIoz7l+3Y=
+github.com/aws/aws-lambda-go v1.41.0/go.mod h1:jwFe2KmMsHmffA1X2R09hH6lFzJQxzI8qK17ewzbQMM=
+github.com/eawsy/aws-lambda-go-event v0.0.0-20171129201522-e888a5ec6428 h1:atyHROURNp47nZtvg1itzXXPZG0erDpiu0o9t+m6Row=
+github.com/eawsy/aws-lambda-go-event v0.0.0-20171129201522-e888a5ec6428/go.mod h1:AK3QoIE1OfR/FWVNyh3rnWQszWnDyoT6eEnQ7ib/YCo=
