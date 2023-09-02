@@ -38,9 +38,13 @@ Before deploying and using this application, you need to have the following:
 8. The Lambda function responds to the webhook with a success message and status code.
 
 ## Deploying the Application
-1. **Build and archive the code**: Go to the directory and build the code. Eg : 'cd comments/created' 'GOOS=linux GOARCH=amd64 go build -o commented comment.go'
+1. **Build and archive the code**: Go to the directory and build the code.   
+Eg :  
+``$ cd comments/created``  
+``$ GOOS=linux GOARCH=amd64 go build -o commented comment.go``
 
 1. **Deploy Lambda Function**: Deploy the Lambda function with the necessary environment variables (ZOHO_CLIQ_API_TOKEN, JIRA_URL, LAMBDA_CRED) and enable the Function URL. See the screenshot below. 
+
 2. **Configure Jira Webhook**: In your Jira instance, configure a webhook that sends events directly to the Lambda function URL. Set the authentication parameter (`lamda-auth`) in the webhook URL.
 
 3. **Testing**: Test the setup by triggering Jira events and verifying the Zoho Cliq messages.
