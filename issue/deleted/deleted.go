@@ -294,10 +294,6 @@ func SendZohoMessge(issueKey string, issueSummary string, projectName string) {
 		panic("jira_URL environment variable is not set")
 	}
 	// Jira Url
-	channelId := os.Getenv("CHANNEL_ID")
-	if apiToken == "" {
-		panic("jira_URL environment variable is not set")
-	}
 	channelId := os.Getenv("CHANNEL_ENDPOINT")
 	if apiToken == "" {
 		panic("jira_URL environment variable is not set")
