@@ -4,7 +4,7 @@ This application is designed to process Jira webhook events and send messages to
 1. Issue created
 ![Images](./images/issue-created.png)
 2. Issue Updated
-![Images](./images/issue-updated.png)\
+![Images](./images/issue-updated.png)
 3. Comment added
 ![Images](./images/comment-added.png)
 4. Issue Deleted
@@ -27,6 +27,7 @@ Before deploying and using this application, you need to have the following:
    - `ZOHO_CLIQ_API_TOKEN`: Your Zoho Cliq API token.
    - `JIRA_URL`: The base URL of your Jira instance.
    - `LAMBDA_CRED`: User Generated sceret to protect the endpoint.
+   - `CHANNEL_ENDPOINT`: API endpoint of your channe;.
 
 ## Application Flow
 
@@ -53,7 +54,7 @@ Eg :
 ``$ GOOS=linux GOARCH=amd64 go build -o commented comment.go``
 
 1. **Deploy Lambda Function**: Deploy the Lambda function with the necessary environment variables (ZOHO_CLIQ_API_TOKEN, JIRA_URL, LAMBDA_CRED) and enable the Function URL. See the screenshot below. 
-![Images](./images/lambda-cred.png)
+![Images](./images/lamda-cred.png)
 
 2. **Configure Jira Webhook**: In your Jira instance, configure a webhook that sends events directly to the Lambda function URL. Set the authentication parameter (`lamda-auth`) in the webhook URL.
 ![Images](./images/jira-webhook.png)
