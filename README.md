@@ -4,14 +4,11 @@ This application is designed to process Jira webhook events and send messages to
 1. Issue created
 ![Images](./images/issue-created.png)
 2. Issue Updated
-![Images](./images/issue-updated.png)\
+![Images](./images/issue-updated.png)
 3. Comment added
 ![Images](./images/comment-added.png)
 4. Issue Deleted
 ![Images](./images/issue-deleted.png)
-
-
-
 
 
 ## Prerequisites
@@ -30,6 +27,7 @@ Before deploying and using this application, you need to have the following:
    - `ZOHO_CLIQ_API_TOKEN`: Your Zoho Cliq API token.
    - `JIRA_URL`: The base URL of your Jira instance.
    - `LAMBDA_CRED`: User Generated sceret to protect the endpoint.
+   - `CHANNEL_ENDPOINT`: API endpoint of your channel.
 
 ## Application Flow
 
