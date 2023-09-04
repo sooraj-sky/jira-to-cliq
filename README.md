@@ -54,7 +54,7 @@ Eg :
 ``$ GOOS=linux GOARCH=amd64 go build -o commented comment.go``
 
 1. **Deploy Lambda Function**: Deploy the Lambda function with the necessary environment variables (ZOHO_CLIQ_API_TOKEN, JIRA_URL, LAMBDA_CRED) and enable the Function URL. See the screenshot below. 
-![Images](./images/lambda-cred.png)
+![Images](./images/lamda-cred.png)
 
 2. **Configure Jira Webhook**: In your Jira instance, configure a webhook that sends events directly to the Lambda function URL. Set the authentication parameter (`lamda-auth`) in the webhook URL.
 ![Images](./images/jira-webhook.png)
